@@ -5,6 +5,18 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+"----Autocomplete brackets----
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+"----Autocomplete brackets----
+
+
 "=================RYAN SETTINGS=========================
 
 
