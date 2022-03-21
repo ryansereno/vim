@@ -1,5 +1,6 @@
 "=================RYAN SETTINGS=========================
-nnoremap <silent> ,<space> :w<cr>:!clear;python3 %<cr>
+nnoremap <silent> ,<space> :w !python3 %<cr>
+nnoremap <silent> n<space> :w !node %<cr>
 set belloff=all
 set number
 set tabstop=4
