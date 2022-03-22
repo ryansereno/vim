@@ -1,11 +1,13 @@
 "=================RYAN SETTINGS=========================
-nnoremap <silent> ,<space> :w !python3 %<cr>
-nnoremap <silent> n<space> :w !node %<cr>
+nnoremap <silent> ,<space> :w<cr>:!clear;python3 %<cr>
+nnoremap <silent> n<space> :w<cr>:!clear;node %<cr>
 set belloff=all
 set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
+colorscheme synthwave
+syntax on
 
 "----Autocomplete brackets----
 inoremap " ""<left>
