@@ -19,6 +19,29 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 "----Autocomplete brackets----
 
+"-------AutoDark--------
+function! ChangeColorScheme(timer) 
+    if system('defaults read -g AppleInterfaceStyle') == 0  &&  execute('colo')  != 'synthwave' "must do logical check on shell exit code, not its reponse
+        :colorscheme synthwave
+    elseif execute('colo') != 'onehalflight'
+        :colorscheme onehalflight
+    endif
+endfunction
+
+function! CheckOSMode()
+    let timer = timer_start(1000, 'ChangeColorScheme', {'repeat':-1})
+""    call ChangeColorScheme()
+endfunction
+call CheckOSMode()
+"-------AutoDark--------
+
+"-------StatusLine------
+set statusline=
+set statusline+=%f
+set statusline+=%=
+set statusline+=💾📠📟\ \ \ \ 
+set statusline+=%l:%c\ \ \ \ 
+"-------StatusLine------
 
 "=================RYAN SETTINGS=========================
 
