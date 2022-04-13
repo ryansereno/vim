@@ -8,6 +8,7 @@ set shiftwidth=4
 set expandtab
 colorscheme synthwave
 syntax on
+set termguicolors
 
 "----Autocomplete brackets----
 inoremap " ""<left>
@@ -32,7 +33,7 @@ function! CheckOSMode()
     let timer = timer_start(1000, 'ChangeColorScheme', {'repeat':-1})
 ""    call ChangeColorScheme()
 endfunction
-call CheckOSMode()
+""call CheckOSMode()
 "-------AutoDark--------
 
 "-------StatusLine------
@@ -42,6 +43,13 @@ set statusline+=%=
 set statusline+=💾📠📟\ \ \ \ 
 set statusline+=%l:%c\ \ \ \ 
 "-------StatusLine------
+
+"---------isEdited---------"'
+function! IsEdited()
+    if exec() == +
+        statusline+=💾📠
+endfunction
+"---------isEdited---------"'
 
 "=================RYAN SETTINGS=========================
 
