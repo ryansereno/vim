@@ -1,6 +1,6 @@
 *
 !*.vimrc
-!*/.vim
+!*~/.vim
 */.vim/dirs
 !*.gitignore
 !*README.md
