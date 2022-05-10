@@ -6,9 +6,10 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
-colorscheme synthwave
+colorscheme PaperColor
 syntax on
 set termguicolors
+au BufNewFile,BufRead *.ejs set filetype=html
 
 "----Autocomplete brackets----
 inoremap " ""<left>
@@ -37,11 +38,11 @@ endfunction
 "-------AutoDark--------
 
 "-------StatusLine------
-set statusline=
-set statusline+=%f
-set statusline+=%=
-set statusline+=💾📠📟\ \ \ \ 
-set statusline+=%l:%c\ \ \ \ 
+""set statusline=
+""set statusline+=%f
+""set statusline+=%=
+""set statusline+=💾📠📟\ \ \ \ 
+""set statusline+=%l:%c\ \ \ \ 
 "-------StatusLine------
 
 "---------isEdited---------"'
@@ -63,5 +64,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 Plug 'ap/vim-css-color'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 "=================PLUG CONFIGURATION====================
