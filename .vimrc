@@ -10,6 +10,7 @@ colorscheme PaperColor
 syntax on
 set termguicolors
 au BufNewFile,BufRead *.ejs set filetype=html
+let g:netrw_liststyle = 3
 
 "----Autocomplete brackets----
 inoremap " ""<left>
@@ -43,6 +44,7 @@ endfunction
 ""set statusline+=%=
 ""set statusline+=💾📠📟\ \ \ \ 
 ""set statusline+=%l:%c\ \ \ \ 
+let g:airline_theme='xtermlight'
 "-------StatusLine------
 
 "---------isEdited---------"'
@@ -66,5 +68,6 @@ Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-loc
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
 call plug#end()
 "=================PLUG CONFIGURATION====================
