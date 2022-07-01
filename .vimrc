@@ -9,9 +9,10 @@ set expandtab
 colorscheme PaperColor
 syntax on
 set termguicolors
-au BufNewFile,BufRead *.ejs set filetype=html
+au! BufNewFile,BufRead *.ejs setf html
 let g:netrw_liststyle = 3
-
+let g:netrw_winsize = 25
+command! Pret :CocCommand prettier.forceFormatDocument
 "----Autocomplete brackets----
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -69,5 +70,6 @@ Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 "=================PLUG CONFIGURATION====================
