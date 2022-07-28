@@ -71,5 +71,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 "=================PLUG CONFIGURATION====================
