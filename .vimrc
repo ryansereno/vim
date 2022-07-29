@@ -72,5 +72,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
+Plug 'uguu-org/vim-matrix-screensaver'
 call plug#end()
 "=================PLUG CONFIGURATION====================
