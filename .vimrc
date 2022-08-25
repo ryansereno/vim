@@ -78,5 +78,6 @@ Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'uguu-org/vim-matrix-screensaver'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 "=================PLUG CONFIGURATION====================
