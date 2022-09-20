@@ -17,7 +17,11 @@ set termguicolors
 au! BufNewFile,BufRead *.ejs setf html
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
+let g:netrw_preview = 1
 command! Pret :CocCommand prettier.forceFormatDocument
+let g:user_emmet_leader_key=','
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 25<CR>
+
 "----Autocomplete brackets----
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -53,12 +57,6 @@ endfunction
 let g:airline_theme='xtermlight'
 "-------StatusLine------
 
-"---------isEdited---------"'
-function! IsEdited()
-    if exec() == +
-        statusline+=💾📠
-endfunction
-"---------isEdited---------"'
 
 "=================RYAN SETTINGS=========================
 
