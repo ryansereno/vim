@@ -20,7 +20,7 @@ let g:netrw_winsize = 25
 let g:netrw_preview = 1
 command! Pret :CocCommand prettier.forceFormatDocument
 let g:user_emmet_leader_key=','
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 25<CR>
+nnoremap <leader>pv :w<CR> :Ex <CR> :vertical resize 25<CR>
 
 "----Autocomplete brackets----
 inoremap " ""<left>
