@@ -20,7 +20,7 @@ let g:netrw_winsize = 25
 let g:netrw_preview = 1
 command! Pret :CocCommand prettier.forceFormatDocument
 let g:user_emmet_leader_key=','
-nnoremap <leader>pv :w<CR> :Ex <CR> :vertical resize 25<CR>
+nnoremap <leader>t :w<CR> :Ex <CR> :vertical resize 25<CR>
 
 "----Autocomplete brackets----
 inoremap " ""<left>
@@ -49,14 +49,15 @@ endfunction
 "-------AutoDark--------
 
 "-------StatusLine------
-""set statusline=
-""set statusline+=%f
-""set statusline+=%=
-""set statusline+=💾📠📟\ \ \ \ 
-""set statusline+=%l:%c\ \ \ \ 
 let g:airline_theme='xtermlight'
 "-------StatusLine------
 
+"-------RainbowParentheses------
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+"-------RainbowParentheses------
 
 "=================RYAN SETTINGS=========================
 
@@ -77,5 +78,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
 "=================PLUG CONFIGURATION====================
