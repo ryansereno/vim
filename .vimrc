@@ -21,6 +21,7 @@ let g:netrw_preview = 1
 command! Pret :CocCommand prettier.forceFormatDocument
 let g:user_emmet_leader_key=','
 nnoremap <leader>t :w<CR> :Ex <CR> :vertical resize 25<CR>
+nnoremap <leader>p :Pret<CR>
 
 "----Autocomplete brackets----
 inoremap " ""<left>
@@ -66,9 +67,6 @@ au Syntax * RainbowParenthesesLoadBraces
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'mattn/emmet-vim'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
