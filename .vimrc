@@ -7,13 +7,18 @@ set shiftwidth=4
 set expandtab
 syntax on
 set termguicolors
+set encoding=UTF-8
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vue'] = ''
 au! BufNewFile,BufRead *.ejs setf html
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
 let g:netrw_preview = 1
 command! Pret :CocCommand prettier.forceFormatDocument
 let g:user_emmet_leader_key=','
-nnoremap <leader>t :w<CR> :Ex <CR> ":vertical resize 25<CR>
+"nnoremap <leader>t :w<CR> :Ex <CR> 
+"nnoremap <leader>T :w<CR> :Ex <CR> :vertical resize 25<CR>
+nnoremap <leader>t :NERDTree<CR>
 nnoremap <leader>p :Pret<CR>
 colorscheme spaceduck
 
@@ -24,7 +29,7 @@ nnoremap <silent> =<space> :w<cr>:w !gcc % && ./a.out<cr>
 "-----------------Code-Execution--------------------------
 
 "-------StatusLine------
-let g:airline_theme='xtermlight'
+let g:airline_theme='cobalt2'
 "-------StatusLine------
 
 "-------RainbowParentheses------
@@ -52,5 +57,7 @@ Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 "=================PLUG CONFIGURATION====================
