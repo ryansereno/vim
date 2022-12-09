@@ -9,7 +9,8 @@ syntax on
 set termguicolors
 set encoding=UTF-8
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vue'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vue'] = 'V'
+let NERDTreeShowHidden=1
 au! BufNewFile,BufRead *.ejs setf html
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
@@ -18,7 +19,7 @@ command! Pret :CocCommand prettier.forceFormatDocument
 let g:user_emmet_leader_key=','
 "nnoremap <leader>t :w<CR> :Ex <CR> 
 "nnoremap <leader>T :w<CR> :Ex <CR> :vertical resize 25<CR>
-nnoremap <leader>t :NERDTree<CR>
+nnoremap <leader>t :w<CR> :NERDTree<CR>
 nnoremap <leader>p :Pret<CR>
 colorscheme spaceduck
 
@@ -39,6 +40,22 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 "-------RainbowParentheses------
 
+"-------AutoDark-----------------
+  function! ChangeColorScheme(timer) 
+      if system('defaults read -g AppleInterfaceStyle') == 0  &&  execute('colo')  != 'spaceduck' "must do logical c    heck on shell exit code, not its reponse
+          :colorscheme spaceduck
+      elseif execute('colo') != 'onehalflight'
+          :colorscheme onehalflight
+      endif
+  endfunction
+  
+  function! CheckOSMode()
+      let timer = timer_start(100000, 'ChangeColorScheme', {'repeat':-1})
+  ""    call ChangeColorScheme()
+  endfunction
+  
+  call CheckOSMode()
+"-------AutoDark-----------------
 "=================RYAN SETTINGS=========================
 
 
