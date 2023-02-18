@@ -22,7 +22,11 @@ let g:user_emmet_leader_key=','
 nnoremap <leader>t :w<CR> :NERDTree<CR>
 nnoremap <leader>p :Pret<CR>
 colorscheme spaceduck
-
+set rtp+=/usr/local/opt/fzf "route for fzf executable"
+let $FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,package-lock.json,package.json}"'
+let g:polyglot_disabled = ['vue'] "to fix performance issues in .vue files
+"cntrl-p commands for fuzzy find
+nnoremap <C-p> :Rg<cr> 
 "-----------------Code-Execution--------------------------
 nnoremap <silent> ,<space> :w<cr>:w !python3 %<cr> 
 nnoremap <silent> n<space> :w<cr>:w !node %<cr>
@@ -54,7 +58,7 @@ au Syntax * RainbowParenthesesLoadBraces
   ""    call ChangeColorScheme()
   endfunction
   
-  call CheckOSMode()
+" call CheckOSMode()
 "-------AutoDark-----------------
 "=================RYAN SETTINGS=========================
 
@@ -76,5 +80,6 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 "=================PLUG CONFIGURATION====================
