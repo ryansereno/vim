@@ -77,6 +77,5 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf.vim'
-Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 "=================PLUG CONFIGURATION====================
